@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9z4-y5-ftC">
+                                <rect key="frame" x="16" y="20" width="568" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8rH-Dl-aKE">
+                                <rect key="frame" x="16" y="205" width="568" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="ylc-oj-sE2"/>
+                                </constraints>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-kE-s8b">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Select Image" id="l4B-ap-Iby">
+                                        <connections>
+                                            <action selector="selectImage:" destination="BYZ-38-t0r" id="Cxc-2i-Lzb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Post Message" id="tYT-Od-xme">
+                                        <connections>
+                                            <action selector="sendPost:" destination="BYZ-38-t0r" id="bpl-8H-Nvv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="G5c-kE-s8b" secondAttribute="bottom" id="6TD-aO-OdU"/>
+                            <constraint firstAttribute="trailing" secondItem="G5c-kE-s8b" secondAttribute="trailing" id="Ez7-Jk-zD3"/>
+                            <constraint firstItem="9z4-y5-ftC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qii-hE-Fqv"/>
+                            <constraint firstItem="G5c-kE-s8b" firstAttribute="top" secondItem="8rH-Dl-aKE" secondAttribute="bottom" constant="16" id="QnY-Bj-27c"/>
+                            <constraint firstItem="8rH-Dl-aKE" firstAttribute="top" secondItem="9z4-y5-ftC" secondAttribute="bottom" constant="15" id="Soy-r9-Idu"/>
+                            <constraint firstItem="9z4-y5-ftC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fe2-eq-0eX"/>
+                            <constraint firstItem="8rH-Dl-aKE" firstAttribute="top" secondItem="9z4-y5-ftC" secondAttribute="bottom" constant="15" id="foD-rN-7MG"/>
+                            <constraint firstItem="8rH-Dl-aKE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gc0-n1-9Bs"/>
+                            <constraint firstItem="9z4-y5-ftC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hZd-c4-G6D"/>
+                            <constraint firstItem="8rH-Dl-aKE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="thx-Gp-QTg"/>
+                            <constraint firstItem="G5c-kE-s8b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wEX-82-SxH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postImage" destination="8rH-Dl-aKE" id="qJZ-Df-x0a"/>
+                        <outlet property="postText" destination="9z4-y5-ftC" id="ga3-rn-uUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
